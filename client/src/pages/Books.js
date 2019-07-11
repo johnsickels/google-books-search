@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 // import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Container, Row, Col } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, FormBtn } from "../components/Form";
@@ -79,18 +79,24 @@ class Books extends Component {
               <List>
                 {this.state.books.map(book => (
                   <ListItem key={book.id}>
-                    <Link to={"/books/" + book.id}>
+                    <a href={book.volumeInfo.previewLink}>
                       <strong>
                         {book.volumeInfo.title}
                       </strong>
-                    </Link>
+                    </a>
+                    {book.volumeInfo.authors}
+                    {book.volumeInfo.description}
+                    {book.volumeInfo.imageLinks.smallThumbnail}
+
+
+
                     <DeleteBtn onClick={() => this.deleteBook(book.id)} />
                   </ListItem>
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
         </Row>
 
