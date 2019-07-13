@@ -35,6 +35,8 @@ class SearchBooks extends Component {
           // store responses in an array
           let results = res.data.items
           // map through the array
+          console.log(results);
+          
           results = results.map(result => {
             // store each book information in a new object
             result = {
@@ -46,6 +48,8 @@ class SearchBooks extends Component {
               image: result.volumeInfo.imageLinks.thumbnail,
               link: result.volumeInfo.infoLink
             }
+            console.log(result);
+            
             return result;
           })
           // reset the state of the empty books array to the new array of objects

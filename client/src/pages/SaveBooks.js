@@ -13,8 +13,9 @@ class SaveBook extends Component {
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
     API.getBooks()
+      // .then(res => console.log(res.data))
       .then(res => this.setState({ savedBooks: res.data }))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   }
 
   handleDeleteButton = id => {
