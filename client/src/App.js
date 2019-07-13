@@ -11,7 +11,7 @@ import "./App.css"
 function App() {
   return (
     <Router>
-      <div>
+      {/* <div> */}
         <Nav />
         <Switch>
           <Route exact path="/" component={SearchBooks} />
@@ -20,7 +20,7 @@ function App() {
           <Route component={NoMatch} /> 
         </Switch>
         <Footer />
-      </div>
+      {/* </div> */}
     </Router>
   );
 }

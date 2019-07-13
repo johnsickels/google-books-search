@@ -28,7 +28,12 @@ const SavedResult = props => {
                                             <h2 className="bookTitle">{savedBook.title}</h2>
                                         </Row>
                                         <Row>
-                                            <h3 className="bookAuthor">{savedBook.authors}</h3>
+                                            {savedBook.authors.map(author => {
+                                                return (
+                                                    <h3 className="bookAuthor">{author}, </h3>
+                                                )
+                                            })}
+                                            
                                         </Row>
                                         <Row>
                                             <p className="bookDescription">{savedBook.description}</p>
