@@ -18,13 +18,13 @@ In this activity, I will create a new React-based Google Books Search app. This 
 
 * The following Express routes for the app:
 
- * `/api/books` (get) - Should return all saved books as JSON.
+  * `/api/books` (get) - Should return all saved books as JSON.
 
- * `/api/books` (post) - Will be used to save a new book to the database.
+  * `/api/books` (post) - Will be used to save a new book to the database.
 
- * `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
+  * `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
 
- * `*` (get) - Will load the single HTML page in `client/build/index.html`. 
+  * `*` (get) - Will load the single HTML page in `client/build/index.html`. 
 
 - - -
 
